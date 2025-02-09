@@ -7,6 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transcribator.Mvc", "Transc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transcription.Domain", "TranscriptionDomain\Transcription.Domain.csproj", "{C7418E9A-79A3-4AE7-A8D2-5DF75DFDAABE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{F3D39F0A-F7C6-4F72-82CF-48B9C1EFF922}"
+	ProjectSection(SolutionItems) = preProject
+		images\home-page.jpg = images\home-page.jpg
+		images\info-page.jpg = images\info-page.jpg
+		images\login-register-page.jpg = images\login-register-page.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
