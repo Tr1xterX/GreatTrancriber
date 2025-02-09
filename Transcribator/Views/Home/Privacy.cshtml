@@ -1,0 +1,181 @@
+﻿@{
+    ViewData["Title"] = "Описание";
+}
+<h1>@ViewData["Title"]</h1>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <style>
+        body {
+            padding-top: 56px;
+        }
+
+        .jumbotron {
+            background-color: #f8f9fa;
+            padding: 4rem 2rem;
+            border-radius: 0;
+        }
+
+        .feature {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Транскрибация</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Функции</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Приложение для транскрибации аудиосообщений</h1>
+        <p class="lead">Преобразуйте ваши аудиосообщения в текст с легкостью и точностью.</p>
+        <a class="btn btn-primary btn-lg" href="#features" role="button">Узнать больше</a>
+    </div>
+
+    <div class="container">
+        <div class="row" id="features">
+            <div class="col-md-4 feature">
+                <h2>Простота использования</h2>
+                <p>Наше приложение интуитивно понятно и легко в использовании. Просто загрузите аудиофайл и получите текстовую транскрипцию в считанные минуты.</p>
+            </div>
+            <div class="col-md-4 feature">
+                <h2>Высокая точность</h2>
+                <p>Мы используем передовые технологии распознавания речи, чтобы обеспечить максимальную точность транскрипции.</p>
+            </div>
+            <div class="col-md-4 feature">
+                <h2>Поддержка различных форматов</h2>
+                <p>Наше приложение поддерживает широкий спектр аудиоформатов, включая MP3, WAV, и многие другие.</p>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="contact">
+            <div class="col-md-12 text-center">
+                <h2>Свяжитесь с нами</h2>
+                <p>Если у вас есть вопросы или предложения, пожалуйста, свяжитесь с нами.</p>
+                <a class="btn btn-secondary" href="mailto:support@transcriptionapp.com">Написать нам</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2023 Приложение для транскрибации аудиосообщений. Все права защищены.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+<!-- @{
+    ViewData["Title"] = "Описание приложения для транскрибации аудиосообщений";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <style>
+        body {
+            padding-top: 56px;
+            background-color: #f8f9fa;
+        }
+        .jumbotron {
+            background-color: #f8f9fa;
+            padding: 4rem 2rem;
+            border-radius: 0;
+        }
+        .feature {
+            margin-bottom: 2rem;
+        }
+        .gnome {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Транскрибация</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Функции</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Приложение для транскрибации аудиосообщений</h1>
+        <p class="lead">Преобразуйте ваши аудиосообщения в текст с помощью наших гномов-переводчиков и их незаконной магии!</p>
+        <a class="btn btn-primary btn-lg" href="#features" role="button">Узнать больше</a>
+    </div>
+
+    <div class="container">
+        <div class="row" id="features">
+            <div class="col-md-4 feature">
+                <h2>Гномы-переводчики</h2>
+                <p>Наши гномы-переводчики работают день и ночь, чтобы преобразовать ваши аудиосообщения в текст. Они используют древние заклинания и магические артефакты, чтобы обеспечить максимальную точность транскрипции.</p>
+            </div>
+            <div class="col-md-4 feature">
+                <h2>Незаконная магия</h2>
+                <p>Мы используем незаконную магию, чтобы сделать нашу транскрибацию быстрой и точной. Наши гномы-переводчики рискуют своей свободой, чтобы вы могли получить текстовую транскрипцию в считанные минуты.</p>
+            </div>
+            <div class="col-md-4 feature">
+                <h2>Поддержка различных форматов</h2>
+                <p>Наше приложение поддерживает широкий спектр аудиоформатов, включая MP3, WAV, и многие другие. Просто загрузите аудиофайл, и наши гномы-переводчики сделают всю работу за вас.</p>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="contact">
+            <div class="col-md-12 text-center">
+                <h2>Свяжитесь с нами</h2>
+                <p>Если у вас есть вопросы или предложения, пожалуйста, свяжитесь с нами.</p>
+                <a class="btn btn-secondary" href="mailto:support@transcriptionapp.com">Написать нам</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2023 Приложение для транскрибации аудиосообщений. Все права защищены.</p>
+        <p class="gnome">Примечание: Гномы-переводчики и незаконная магия — это шутка. На самом деле мы используем передовые технологии распознавания речи.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+ -->

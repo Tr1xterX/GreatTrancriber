@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transcribator.Mvc", "Transcribator\Transcribator.Mvc.csproj", "{51BEDFAB-A39B-4F85-BD95-28F1FF4C8AAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transcription.Domain", "TranscriptionDomain\Transcription.Domain.csproj", "{C7418E9A-79A3-4AE7-A8D2-5DF75DFDAABE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51BEDFAB-A39B-4F85-BD95-28F1FF4C8AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51BEDFAB-A39B-4F85-BD95-28F1FF4C8AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51BEDFAB-A39B-4F85-BD95-28F1FF4C8AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51BEDFAB-A39B-4F85-BD95-28F1FF4C8AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7418E9A-79A3-4AE7-A8D2-5DF75DFDAABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7418E9A-79A3-4AE7-A8D2-5DF75DFDAABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7418E9A-79A3-4AE7-A8D2-5DF75DFDAABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7418E9A-79A3-4AE7-A8D2-5DF75DFDAABE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

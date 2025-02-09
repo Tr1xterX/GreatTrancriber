@@ -1,0 +1,124 @@
+﻿@using Transcribator.Mvc.Models.Account;
+@model AccountViewModel
+@{
+    //Layout = null;
+
+    //var isVisibleRegisterTab = Model?.RegisterViewModel != null;
+}
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@{
+    ViewData["Title"] = "Главная страница";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <style>
+        body {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .drop-zone {
+            border: 2px dashed #007bff;
+            border-radius: 10px;
+            padding: 50px;
+            text-align: center;
+            background-color: #ffffff;
+            transition: background-color 0.3s;
+        }
+
+            .drop-zone.dragover {
+                background-color: #e9ecef;
+            }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div id="dropZone" class="drop-zone">
+                        <h2>Перетащите аудиофайл сюда</h2>
+                        <p>или</p>
+                        <form id="uploadForm" enctype="multipart/form-data">
+                            <button class="btn btn-primary" type="button" onclick="document.getElementById('fileInput').click()">Выберите файл</button>
+                            <input type="file" id="fileInput" name="file" style="display:none;" accept="audio/*" onchange="handleFileSelect(event)">
+                            <button type="submit" class="btn btn-success mt-2">Загрузить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>Оно обязательно заработает! (Ручной труд гномов-переводчиков)</p>
+    </footer>
+
+    <script>
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const uploadForm = document.getElementById('uploadForm');
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', (e) => {
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            handleFileSelect(e);
+        });
+
+        function handleFileSelect(event) {
+            const files = event.type === 'drop' ? event.dataTransfer.files : event.target.files;
+            if (files.length > 0) {
+                const file = files[0];
+                console.log('Файл выбран:', file);
+                alert('Файл выбран: ' + file.name);
+            }
+        }
+
+        uploadForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(uploadForm);
+            try {
+                const response = await fetch('/AudioFiles/Upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                if (response.ok) {
+                    alert('Файл успешно загружен.');
+                } else {
+                    alert('Ошибка при загрузке файла.');
+                }
+            } catch (error) {
+                console.error('Ошибка:', error);
+            }
+        });
+    </script>
+</body>
+</html>
